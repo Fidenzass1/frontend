@@ -49,7 +49,16 @@ export default function WeatherCard({ city }) {
       </CardMedia>
 
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography 
+          gutterBottom 
+          variant="h5" 
+          component="div" 
+          sx={{ 
+            fontFamily: '"Poppins", "Helvetica", "Arial", sans-serif',
+            fontWeight: 600,
+            letterSpacing: '0.5px'
+          }}
+        >
           {city.name}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>

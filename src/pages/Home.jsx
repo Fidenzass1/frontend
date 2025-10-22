@@ -11,7 +11,7 @@ export default function Home() {
       }}
     >
       <main style={{ flex: 1, padding: '2rem' }}>
-        <h1 style={{ marginBottom: '1rem', textAlign: 'center' }}>
+        <h1 style={{ marginBottom: '1rem', textAlign: 'center' ,color:"#1c2227ff"}}>
           Weather Dashboard
         </h1>
         <WeatherList />

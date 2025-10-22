@@ -6,7 +6,7 @@ export default function Footer() {
     <footer
       style={{
         width: "100vw",             // full viewport width
-        backgroundColor: "#1976d2", 
+        backgroundColor: "#4a555fff", 
         color: "white",
         textAlign: "center",
         margin: 0,
