@@ -8,28 +8,48 @@ export default function Home() {
 
   if (isLoading) return <h2>Loading...</h2>;
 
-  if (!isAuthenticated) {
+   if (!isAuthenticated) {
     return (
-      <div style={{ textAlign: "center", marginTop: "100px" }}>
-        <h2>Please log in to access the Weather Dashboard 🌦️</h2>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
+          background: "linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%)",
+          color: "#1c2227",
+          textAlign: "center",
+          padding: "0 20px",
+        }}
+      >
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "20px" }}>
+          🌦️ Welcome to Weatherly
+        </h1>
+        <p style={{ fontSize: "1.2rem", marginBottom: "40px" }}>
+          Please log in to access your personalized Weather Dashboard.
+        </p>
         <button
           onClick={() => loginWithRedirect()}
           style={{
-            padding: "10px 20px",
-            fontSize: "16px",
+            padding: "12px 30px",
+            fontSize: "18px",
             backgroundColor: "#1c2227",
-            color: "white",
+            color: "#fff",
             border: "none",
-            borderRadius: "8px",
+            borderRadius: "10px",
             cursor: "pointer",
+            boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+            transition: "all 0.3s ease",
           }}
+          onMouseEnter={(e) => (e.target.style.transform = "scale(1.05)")}
+          onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
         >
           Log In
         </button>
       </div>
     );
   }
-
   return (
     <div
       style={{
@@ -46,18 +66,22 @@ export default function Home() {
 
         <WeatherList />
 
-        <div style={{ textAlign: "center", marginTop: "20px" }}>
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
           <button
             onClick={() => logout({ returnTo: window.location.origin })}
             style={{
-              padding: "10px 20px",
-              fontSize: "16px",
+              padding: "12px 30px",
+              fontSize: "18px",
               backgroundColor: "#c0392b",
-              color: "white",
+              color: "#fff",
               border: "none",
-              borderRadius: "8px",
+              borderRadius: "10px",
               cursor: "pointer",
+              boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+              transition: "all 0.3s ease",
             }}
+            onMouseEnter={(e) => (e.target.style.transform = "scale(1.05)")}
+            onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
           >
             Log Out
           </button>
