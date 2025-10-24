@@ -68,3 +68,6 @@ export default function WeatherCard({ city }) {
     </Card>
   );
 }
+
+
+//weather card component

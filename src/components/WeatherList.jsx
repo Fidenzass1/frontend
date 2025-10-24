@@ -80,3 +80,6 @@ export default function WeatherList() {
     </div>
   );
 }
+
+
+//weather list component
